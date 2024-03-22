@@ -31,3 +31,8 @@ base-build() ( # use a subshell
     echo -e "${Green}SUCCESSFULLY build $FW_FILE${Color_Off}"
 )
 
+build-all() {
+    base-build seeeduino_xiao_ble corne_xiao_dongle
+    base-build seeeduino_xiao_ble corne_xiao_left
+    base-build seeeduino_xiao_ble corne_xiao_right
+}

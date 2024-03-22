@@ -1,0 +1,17 @@
+
+if SHIELD_CORNE_XIAO_LEFT || SHIELD_CORNE_XIAO_RIGHT || SHIELD_CORNE_XIAO_DONGLE
+    config ZMK_SPLIT
+        default y
+
+    config ZMK_BLE
+        default y
+endif
+
+if SHIELD_CORNE_XIAO_DONGLE
+    config ZMK_KEYBOARD_NAME
+        default "Corne"
+
+    config ZMK_SPLIT_ROLE_CENTRAL
+        default y
+
+endif
