@@ -31,8 +31,22 @@ base-build() ( # use a subshell
     echo -e "${Green}SUCCESSFULLY build $FW_FILE${Color_Off}"
 )
 
-build-all() {
+build-corne-dongle() {
+    base-build seeeduino_xiao_ble corne_xiao_dongle
+}
+
+build-corne-all() {
     base-build seeeduino_xiao_ble corne_xiao_dongle
     base-build seeeduino_xiao_ble corne_xiao_left
     base-build seeeduino_xiao_ble corne_xiao_right
+}
+
+build-kyria-dingle() {
+    base-build nice_nano_v2 kyria_rev3_dongle
+}
+
+build-kyria-all() {
+    base-build nice_nano_v2 kyria_rev3_dongle
+    base-build nice_nano_v2 kyria_rev3_left
+    base-build nice_nano_v2 kyria_rev3_right
 }
